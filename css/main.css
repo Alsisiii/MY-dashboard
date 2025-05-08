@@ -14,7 +14,6 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    width: 100vw;
 }
 
 
@@ -30,7 +29,7 @@ a {
     color: White;
 }
 
-.page {
+.page2 {
     min-height: 100vh;
     background-color: white;
     display: flex;
@@ -143,6 +142,7 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 14px;
+
 }
 
 .content .content-head .search {
@@ -218,6 +218,7 @@ a {
     width: 32px;
     height: 32px;
     border-radius: 50%;
+
 }
 
 
@@ -257,6 +258,7 @@ a {
     position: relative;
     z-index: 1;
     overflow: hidden;
+    max-width: 100%;
 }
 
 .content-page .weather .temprature::before {
@@ -424,14 +426,6 @@ a {
     gap: 40px;
 }
 
-@media (max-width:767px) {
-    .percent {
-        grid-template-columns: minmax(200px, 1fr);
-        gap: 20px;
-    }
-
-
-}
 
 
 .Percent .degree {
@@ -444,6 +438,7 @@ a {
 .Percent .degree h4 {
     margin: 0;
     font-size: 21px;
+    margin-bottom: 15px;
 }
 
 .Percent .degree .circle {
@@ -511,13 +506,55 @@ a {
 
 .Percent .degree .circle p {
     margin: 0;
-    align-content: center;
+
     background-color: orange;
     width: 160px;
     height: 160px;
     font-size: 40px;
     border-radius: 50%;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:767px) {
+    .Percent {
+        grid-template-columns: minmax(200px, 1fr);
+    }
+
+    .Percent .degree .circle {
+        width: 230px;
+        height: 230px;
+        border-width: 13px;
+    }
+
+    .Percent .degree .circle::before {
+        width: 206px;
+        height: 206px;
+        top: -13px;
+        left: -13px;
+        border-width: 13px;
+    }
+
+
+    .Percent .degree .circle .dot {
+        width: 165px;
+        height: 165px;
+    }
+
+    .Percent .degree .circle p {
+        width: 120px;
+        height: 120px;
+        font-size: 34px;
+    }
+
+    .Percent .degree .circle::after {
+        width: 30px;
+        height: 30px;
+        right: 7px;
+    }
+
 
 }
 
